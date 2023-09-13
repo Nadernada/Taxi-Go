@@ -19,6 +19,7 @@ const Cards = () => {
       >
         {CardsList.map((item, i) => (
           <div
+            key={i + item.name}
             onClick={() => setSelectedPay(i)}
             className={`
                   w-[50px] 

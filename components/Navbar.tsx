@@ -1,11 +1,18 @@
 import { UserButton } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
 
 import Image from 'next/image'
 
 const Navbar = () => {
+
+  const router = useRouter()
+
   return (
     <div className="flex justify-between p-3 px-10 border-b-[1px] shadow-sm">
-      <div className="flex gap-10 items-center">
+      <div
+        onClick={() => router.push('/')}
+        className="flex gap-10 items-center"
+      >
         <Image
           src='/logo.png'
           alt='logo'
